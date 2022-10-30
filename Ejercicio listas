@@ -1,0 +1,28 @@
+// Ejercicio listas
+
+let compra = ["azucar", "sal", "aceite", "frutas", "arepas"]
+console.log(compra)
+compra.push("Aceite de girasol")
+console.log(compra)
+compra.splice(-1, 1)
+console.log(compra)
+
+const pelis = [
+    {titulo: "El rey León", director: "El director", fecha: 2018},
+    {titulo: "Encanto", director: "Disney", fecha: 2020},
+    {titulo: "Stuartt Little", director: "Otro director", fecha: 1998},
+]
+
+const pelisfilt = pelis.filter(x => x.fecha > 2010)
+console.log(pelisfilt)
+
+const directores = pelis.map(x => x.director)
+console.log(directores)
+const titulos = pelis.map(x => x.titulo)
+console.log(titulos)
+
+const newpelisconcat = directores.concat(titulos)
+console.log(newpelisconcat)
+
+const newlistpelis = [...directores, ...titulos]
+console.log(newlistpelis)
